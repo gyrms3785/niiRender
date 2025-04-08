@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Volume Rendering</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { width: 100vw; height: 100vh; display: block; }
+    .controls {
+      position: absolute; top: 10px; left: 10px;
+      background: rgba(0,0,0,0.6); color: white; padding: 10px; border-radius: 8px;
+    }
+    .controls input { width: 150px; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="controls">
+    <div>
+      Threshold Low: <input type="range" id="low" min="0" max="500" value="250">
+      <span id="lowValue">100</span>
+    </div>
+    <div>
+      Threshold High: <input type="range" id="high" min="0" max="500" value="150">
+      <span id="highValue">300</span>
+    </div>
+  </div>
+  <script type="module" src="./main/code.js"></script>
+</body>
+</html>
